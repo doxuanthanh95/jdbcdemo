@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?language javascript?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="10.0" vgap="30.0" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: #FFF">
+	<padding>
+		<Insets bottom="10.0" left="30.0" right="20.0" top="30.0"/>
+	</padding>
+	<children>
+		<Pane style="-fx-border-color: #f2f2f2; -fx-border-width: 1; -fx-background-radius: 6;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+	        <children>
+	        	<Label layoutX="5.0" layoutY="-8.0" style="-fx-background-color: #FFF; -fx-font: 15 Arial; -fx-font-weight:bold ; -fx-text-fill: #660000;" text="Thông tin sinh viên">
+		        </Label>
+	        	<GridPane hgap="30.0" vgap="20.0">
+	        		<padding>
+					    <Insets bottom="10.0" left="30.0" right="20.0" top="30.0"/>
+					</padding>
+	        		<Label text="Mã sinh viên: " style="-fx-font: 15 Arial;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					</Label>
+					<TextField fx:id="txtMaSinhVien" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="350"> 
+					</TextField>
+
+					<Label text="Tên sinh viên: " style="-fx-font: 15 Arial;" GridPane.columnIndex="0" GridPane.rowIndex="1">
+					</Label>
+					<TextField fx:id="txtTenSinhVien" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="350">
+					</TextField>
+
+					<Label text="Ngày sinh: " style="-fx-font: 15 Arial;" GridPane.columnIndex="0" GridPane.rowIndex="2">
+					</Label>
+					<DatePicker fx:id="dpNgaySinh" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="400">
+					</DatePicker>
+
+					<HBox GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2" spacing="50">
+						<padding>
+			                <Insets left="50.0"/>
+			            </padding>
+						<Button fx:id="btnThem" text="   Thêm   " onAction="java.lang.System.out.println('You clicked me!');" style="-fx-font: 14 Arial;">
+						</Button>
+						<Button fx:id="btnLuu" text="    Lưu   " onAction="java.lang.System.out.println('You clicked me!');" style="-fx-font: 14 Arial;">
+						</Button>
+						<Button fx:id="btnSua" text="   Sửa   " onAction="java.lang.System.out.println('You clicked me!');" style="-fx-font: 14 Arial;">
+						</Button>
+						<Button fx:id="btnXoa" text="   Xóa   " onAction="java.lang.System.out.println('You clicked me!');" style="-fx-font: 14 Arial;">
+						</Button>
+					</HBox>
+	      		</GridPane>
+	        </children>
+	    </Pane>
+
+		<Pane style="-fx-border-color: #f2f2f2; -fx-border-width: 1; -fx-background-radius: 30px; -fx-background-color: #FFFFFF" GridPane.columnIndex="0" GridPane.rowIndex="1" prefHeight="300">
+			<children>
+				<Label layoutX="5.0" layoutY="-8.0" style="-fx-background-color: #FFF; -fx-font: 15 Arial; -fx-font-weight: bold; -fx-text-fill: #660000;" text="Danh sách sinh viên">
+		        </Label>
+		        <GridPane prefHeight="300">
+		        	<padding>
+					    <Insets bottom="10.0" left="20.0" right="20.0" top="20.0"/>
+					</padding>
+		        	<TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0">
+					    <columns>
+					        <TableColumn text="Mã sinh viên" style="-fx-font: 15 Arial;" prefWidth="200">
+					        </TableColumn>
+					        <TableColumn text="Tên sinh viên" style="-fx-font: 15 Arial;" prefWidth="200">
+					        </TableColumn>
+					        <TableColumn text="Ngày sinh" style=" -fx-font: 15 Arial;" prefWidth="200">
+					        </TableColumn>
+					    </columns>    
+					</TableView>
+		        </GridPane>
+			</children>
+		</Pane>
+		<HBox GridPane.columnIndex="0" GridPane.rowIndex="2">
+			<GridPane hgap="30">
+				<Button fx:id="btnFile" text="    File    " onAction="java.lang.System.out.println('You clicked me!');" style="-fx-font: 14 Arial;" GridPane.columnIndex="0">
+				</Button>
+				<Button fx:id="btnCSDL" text="    CSDL    " onAction="java.lang.System.out.println('You clicked me!');" style="-fx-font: 14 Arial;" GridPane.columnIndex="1">
+				</Button>
+				<Button fx:id="btnThoat" text="   Thoát    " onAction="java.lang.System.out.println('You clicked me!');" style="-fx-font: 14 Arial;" GridPane.columnIndex="13">
+				</Button>	
+			</GridPane>		
+		</HBox>
+	</children>
+</GridPane>

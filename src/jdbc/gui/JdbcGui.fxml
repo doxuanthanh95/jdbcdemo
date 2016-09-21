@@ -25,7 +25,7 @@
     <PasswordField fx:id="tfPassword" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
 	<HBox spacing="10" alignment="BOTTOM_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="4" >
-		<Button text="Sign In" onAction="#signIn" />
+		<Button text="Sign In" fx:id="btnSignIn" onAction="#signIn" />
 	
 	</HBox>
 	<Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
